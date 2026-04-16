@@ -101,6 +101,11 @@ namespace Assignment02.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSDATETIME()");
+
                     b.Property<string>("DetailedDescription")
                         .IsRequired()
                         .HasMaxLength(600)
@@ -108,6 +113,11 @@ namespace Assignment02.Migrations
 
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LastModifiedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSDATETIME()");
 
                     b.Property<int>("MaxNumberOfAttendeesAllowed")
                         .HasColumnType("int");

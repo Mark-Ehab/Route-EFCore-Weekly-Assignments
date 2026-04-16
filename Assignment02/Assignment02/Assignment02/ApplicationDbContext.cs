@@ -51,7 +51,10 @@ public sealed class ApplicationDbContext : DbContext
             .WithMany(a => a.EventsAttendee)
             .HasForeignKey(ea => ea.AttendeeId);
 
-        /* Apply configurations of Badge model using Fluent API configuration classes */
+        /* Apply configurations of Event model using Fluent API configuration class */
+        modelBuilder.ApplyConfiguration(new EventConfiguration());
+
+        /* Apply configurations of Badge model using Fluent API configuration class */
         modelBuilder.ApplyConfiguration(new BadgeConfiguration());
     }
 }
