@@ -8,7 +8,7 @@ using System.Text;
 
 namespace BankManagementSystem.Application.Seeder;
 
-public class Seeder
+public sealed class Seeder
 {
     async public static Task SeedAllAsync(ApplicationDbContext context)
     {

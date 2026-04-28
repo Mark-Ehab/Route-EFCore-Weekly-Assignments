@@ -13,7 +13,7 @@ using System.Text;
 
 namespace BankManagementSystem.Application.Services;
 
-public class AccountService
+public sealed class AccountService
 {
     /* Fields */
     private readonly ApplicationDbContext _context;

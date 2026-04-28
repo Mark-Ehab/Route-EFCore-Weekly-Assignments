@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BankManagementSystem.Application.DTOs.AccountCustomerDTOs;
 
-public record AccountCustomerDetailsDTO
+public sealed record AccountCustomerDetailsDTO
 {
     public string AccountNumber { get; set; } = string.Empty;
     public AccountType AccountType { get; set; }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BankManagementSystem.Application.DTOs.AccountCustomerDTOs;
 
-public record UpdateAccountStatusDTO
+public sealed record UpdateAccountStatusDTO
 {
     public string AccountNumber { get; set; } = string.Empty;
     public Guid CustomerId { get; set; }
